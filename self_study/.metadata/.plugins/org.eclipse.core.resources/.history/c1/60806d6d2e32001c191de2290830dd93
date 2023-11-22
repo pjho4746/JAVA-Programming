@@ -1,0 +1,20 @@
+package Lotto;
+
+public class LottoSim {
+
+	public static void main(String[] args) {
+		public static void main(String[] args) {
+			LottoCard c1 = new LottoCard();
+			LottoCard c2 = new LottoCard();
+			
+			System.out.println("<磊悼 积己>");
+			c1.makelottoAuto(5);
+			
+			System.out.println("<荐悼 积己>");
+			c2.makelottoCard(5);
+		}
+
+
+	}
+
+}

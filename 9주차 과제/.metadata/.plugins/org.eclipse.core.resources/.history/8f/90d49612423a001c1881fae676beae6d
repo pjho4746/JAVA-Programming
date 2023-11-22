@@ -1,0 +1,44 @@
+//컴퓨터공학과 20200769 박지호
+public class Bank {
+
+	public static void main(String[] args) {
+		/*
+		Account ac = new Account();
+		
+		try {
+			ac.deposit(100);
+		}
+		catch(MalformedData m) {
+			m.printStackTrace();
+		}
+		ac.check();
+		try {
+			ac.withdraw(50);
+		}
+		catch(MalformedData m) {
+			m.printStackTrace();
+		}
+		ac.check();
+		*/
+		
+		//배열
+		Account accounts = new Account[5];
+		for(int i=0; i<accounts.lenght; i++) {
+			accounts[i] = new Account();
+			try {
+				accounts[i].deposit(100);
+			}
+			catch(MalformedData m) {
+				m.printStackTrace();
+			}
+			accounts[i].check();
+			try {
+				accounts[i].withdraw(50);
+			}
+			catch(MalformedData m) {
+				m.printStackTrace();
+			}
+			accounts[i].check();
+		}
+	}
+}

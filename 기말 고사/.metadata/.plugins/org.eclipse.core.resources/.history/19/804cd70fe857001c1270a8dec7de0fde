@@ -1,0 +1,40 @@
+package Final1;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ItemListener;
+import java.util.Vector;
+
+public class Final16_10 extends JFrame {
+	private Vector<PhoneInfo> mData = new Vector<PhoneInfo>();
+	public Final16_10() {
+		super("ComboBoxList");
+		readData();
+		buildGUI();
+		setBounds(120, 120, 300, 100);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		JComboBox<PhoneInfo>cbox = new JComboBox<PhoneInfo>(mData);
+		cbox.setMaximumRowCount(3);
+		
+		cbox.addItemListener(choiceEventListener);
+		cbox.addActionListenr(selectEventListener);
+		
+		setLayout(new FlowLayout());
+		add(new JLabel("이름"));
+		add(cbox);
+	}
+	private void readData() {
+		mData.add(new PhoneInfo("홍길동", "1990/01/01", "010-111-2222"));
+		mData.add(new PhoneInfo("일지매", "010-999-9999"));
+	}
+	private ItemListener choiceEventListener = new ItemListener() {
+		
+	};
+	public static void main(String[] args) {
+		new Final16_10();
+	}
+
+}

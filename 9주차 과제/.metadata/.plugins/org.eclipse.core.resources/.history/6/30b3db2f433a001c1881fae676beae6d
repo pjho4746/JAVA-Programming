@@ -1,0 +1,50 @@
+//컴퓨터공학과 20200769 박지호
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Bank {
+
+	public static void main(String[] args) {
+		/* 기본 구성
+		Account ac = new Account();
+		
+		try {
+			ac.deposit(100);
+		}
+		catch(MalformedData m) {
+			m.printStackTrace();
+		}
+		ac.check();
+		try {
+			ac.withdraw(50);
+		}
+		catch(MalformedData m) {
+			m.printStackTrace();
+		}
+		ac.check();
+		*/
+		
+		//배열
+		Account[] accounts = new Account[5];
+		Scanner input = new Scanner(System.in);
+		for(int i=0; i<accounts.length; i++) {
+			accounts[i] = new Account();
+			try {
+				System.out.println("정수를 입력하세요");
+				amount = input.nextInt();
+				accounts[i].deposit();
+			}
+			catch(MalformedData m) {
+				m.printStackTrace();
+			}
+			accounts[i].check();
+			try {
+				accounts[i].withdraw(50);
+			}
+			catch(MalformedData m) {
+				m.printStackTrace();
+			}
+			accounts[i].check();
+		}
+	}
+}

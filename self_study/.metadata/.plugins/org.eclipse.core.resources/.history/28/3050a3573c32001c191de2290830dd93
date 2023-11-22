@@ -1,0 +1,13 @@
+package Person1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		UnivStudent s = new UnivStudent();
+		s.age = 20;
+		s.name = "박지호";
+		s.major = "컴퓨터공학";
+		s.WhoAreYou();
+	}
+
+}

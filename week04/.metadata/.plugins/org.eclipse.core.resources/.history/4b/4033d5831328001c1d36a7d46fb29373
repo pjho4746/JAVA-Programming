@@ -1,0 +1,20 @@
+package exam.bead;
+
+public class Child {
+	private int numOfBead;
+	
+	public Child(int numOfBead){
+		this.numOfBead = numOfBead;
+	}
+	
+	public void show() {
+		System.out.println("보유 개수: "+numOfBead);
+	}
+	
+	public void obtainBead(int n) {
+		
+	}
+	public void loseBead(int nLoseBead) {
+		
+	}
+}

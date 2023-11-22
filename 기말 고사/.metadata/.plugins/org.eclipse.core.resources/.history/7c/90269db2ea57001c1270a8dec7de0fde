@@ -1,0 +1,23 @@
+package Final1;
+
+import javax.swing.*;
+
+public class JVariousListTest extends JFrame {
+	public JVariousListTest() {
+		super("JVariousListTest");
+		
+		buildGUI();
+		
+		setBounds(300, 200, 300, 220);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	private void buildGUI() {
+		
+	}
+	public static void main(String[] args) {
+		new JVariousListTest();
+	}
+
+}

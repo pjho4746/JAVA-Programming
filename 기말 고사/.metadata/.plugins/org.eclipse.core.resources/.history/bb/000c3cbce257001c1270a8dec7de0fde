@@ -1,0 +1,23 @@
+package Final1;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Final16_8 extends JFrame {
+	public Final16_8() {
+		super("라디오버튼 만들기 예쩨");
+		buildGUI();
+		setSize(250, 150);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		Container c = this.getContentPane();
+		c.setLayout(new FlowLayout());
+		
+	}
+	public static void main(String[] args) {
+		new Final16_8();
+	}
+
+}

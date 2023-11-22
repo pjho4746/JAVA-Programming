@@ -1,0 +1,27 @@
+package FlowLayOut_14_2;
+
+import java.awt.*;
+import javax.swing.*;
+
+
+public class FlowLayOut2 {
+	private JFrame frame;
+	
+	public FlowLayOut2() {
+		frame = new JFrame("FlowLayOut2");
+		buildGUI();
+		frame.setBounds(100, 200, 200, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+	private void buildGUI() {
+		JTextField text = new JTextField();
+		JButton btn = new JButton("확인");
+		
+		JLabel label = new JLabel("Hello World");
+		//오류 발생(해결 못함)
+		//frame.add(text, FlowLayout.LEFT);
+		//frame.add(btn, FlowLayout.RIGHT);//동(오른쪽)
+		//frame.add(label, FlowLayout.LEADING);//남(아래쪽)
+	}
+}

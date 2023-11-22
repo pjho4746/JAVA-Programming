@@ -1,0 +1,24 @@
+package Final1;
+
+import javax.swing.JFrame;
+
+public class Final16_10 extends JFrame {
+	public Final16_10() {
+		super("ComboBoxList");
+		readData();
+		buildGUI();
+		setBounds(120, 120, 300, 100);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		
+	}
+	private void readData() {
+		
+	}
+	public static void main(String[] args) {
+		new Final16_10();
+	}
+
+}

@@ -1,0 +1,21 @@
+package Final1;
+
+import javax.swing.*;
+
+public class Final16_7 extends JFrame {
+	private JCheckBox[] fruits = new JCheckBox[3];
+	private String[] names = {"사과", "배", "체리");
+	private JLabel sumLabel;
+	
+	public Final16_7() {
+		super("체크박스와 ItemEvent 예제");
+	}
+	private void buildGUI() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new Final16_7();
+	}
+
+}

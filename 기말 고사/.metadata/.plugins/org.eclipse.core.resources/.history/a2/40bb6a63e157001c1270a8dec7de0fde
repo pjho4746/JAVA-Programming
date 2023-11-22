@@ -1,0 +1,29 @@
+package Final1;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Final16_7 extends JFrame {
+	private JCheckBox[] fruits = new JCheckBox[3];
+	private String[] names = {"사과", "배", "체리"};
+	private JLabel sumLabel;
+	
+	public Final16_7() {
+		super("체크박스와 ItemEvent 예제");
+		buildGUI();
+		setSize(250, 200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		Container c = this.getContentPane();
+		c.setLayout(new FlowLayout());
+		
+		c.add(new JLabel("사과 100원, 배 500원, 체리 2000원"));
+	}
+	
+	public static void main(String[] args) {
+		new Final16_7();
+	}
+
+}

@@ -1,0 +1,13 @@
+//컴퓨터공학과 20200769 박지호
+import javax.swing.JFrame;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class RegMember3 extends JFrame {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

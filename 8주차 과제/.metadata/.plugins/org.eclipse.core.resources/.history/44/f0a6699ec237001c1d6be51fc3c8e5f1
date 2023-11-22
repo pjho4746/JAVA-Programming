@@ -1,0 +1,40 @@
+//컴퓨터공학과 20200769 박지호
+package hw.plygon;
+
+public class Rectangle extends Polygon {
+	int weight;
+	int height;
+	Point leftBottom;
+	Point rightTop;
+	
+	//폭과 높이, 위치를 전달받음
+	public Rectangle(int weight, int height, Point leftBottom, Point rightTop)
+	{
+		this.weight = weight;
+		this.height = height;
+		this.leftBottom = leftBottom;
+		this.rightTop = rightTop;
+	}
+
+	double getArea()
+	{
+		
+	}
+	boolean isSquare()
+	{
+		
+	}
+	
+	bool Rectangle::Init(Point& leftTop, Point& rightBottom)
+	{
+		if (leftTop.GetX() > rightBottom.GetX() || leftTop.GetY() > rightBottom.GetY()) {
+			cout << "오류: 잘못된 설정값!" << endl;
+			return false;
+		}
+
+		lt = leftTop;
+		rb = rightBottom;
+	}
+
+	
+}

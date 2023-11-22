@@ -1,0 +1,39 @@
+package Final1;
+
+import javax.swing.*;
+
+public class JVariousListTest extends JFrame {
+	public JVariousListTest() {
+		super("JVariousListTest");
+		
+		buildGUI();
+		
+		setBounds(300, 200, 300, 220);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	private void buildGUI() {
+		setLayout(new FlowLayout());
+		add(createArrayList());
+		add(createVectorList());
+		add(createModelList());
+		add(createObjectModelList());
+	}
+	private JPanel createArryaList() {
+		
+	}
+	private JPanel createVector() {
+		
+	}
+	private JPanel createModelList() {
+		
+	}
+	private JPanel createObjectModelList() {
+		
+	}
+	public static void main(String[] args) {
+		new JVariousListTest();
+	}
+
+}

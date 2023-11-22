@@ -1,0 +1,13 @@
+//컴퓨터공학과 20200769 박지호
+package hw.plygon;
+
+public class CanvasApp {
+	public static display() {
+		
+	}
+	public static void main(String[] args) {
+		//인터페이스 사용을 하지 않아 주어진 조건을 만족해 코드를 짜지 못해 CanvasApp에 구현
+		
+	}
+
+}

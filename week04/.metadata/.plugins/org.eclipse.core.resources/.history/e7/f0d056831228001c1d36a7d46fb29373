@@ -1,0 +1,10 @@
+package exam.bead;
+
+public class BeadSim {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

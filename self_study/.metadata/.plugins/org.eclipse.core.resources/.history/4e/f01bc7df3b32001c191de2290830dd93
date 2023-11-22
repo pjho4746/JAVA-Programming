@@ -1,0 +1,10 @@
+package Person1;
+
+public class UnivStudent extends Person{
+	protected major;
+	
+	public void WhoAreYou() {
+		WhatYourName();
+		HowOldAreYou();
+	}
+}

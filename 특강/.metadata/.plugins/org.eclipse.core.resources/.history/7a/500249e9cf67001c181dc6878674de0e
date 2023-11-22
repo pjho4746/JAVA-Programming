@@ -1,0 +1,37 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class PhoneBookFrame extends JFrame {
+	private JTextField t_name;
+	private JTextField t_birthday;
+	private JTextField t_phoneNum;
+	private JTextField t_major;
+	private JTextField t_grade;
+	private JTextField t_company;
+	
+	private JToggleButton tb_normalInp;
+	private JToggleButton tb_univInp;
+	private JToggleButton tb_companyInp;
+	
+	private JButton b_input;
+	private JButton b_reset;
+	
+	private CardLayout card;
+	private JPanel p_cardPage;
+	
+	public PhoneBookFrame() {
+		
+	}
+	private void registerEvent() {
+		
+	}
+	private void buildGUI() {
+		
+	}
+	private JPanel createInputPanel() {
+		
+	}
+	private JPanel createTopButtonPanel() {
+		
+	}
+}

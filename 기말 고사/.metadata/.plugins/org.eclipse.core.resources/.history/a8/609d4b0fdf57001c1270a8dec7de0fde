@@ -1,0 +1,22 @@
+package Final1;
+//(작성)
+import javax.swing.*;
+
+public class Final16_5 extends JFrame {
+	public Final16_5() {
+		super("텍스트영역 만들기 예제");
+		
+		buildGUI();
+		
+		setSize(300, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		
+	}
+	public static void main(String[] args) {
+		new Final16_5();
+	}
+
+}

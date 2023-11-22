@@ -1,0 +1,16 @@
+package Rectangle;
+
+public class Rectangle {
+	Point lt, rb;
+	
+	public Rectangle(Point left_top, Point right_bottom) {
+		lt = left_top;
+		rb = right_bottom;
+	}
+	public Rectangle(int x1, int y1, int x2, int y2) {
+		Point lt(x1, y1);
+		Point rb(x2, y2);
+	}
+	
+	
+}

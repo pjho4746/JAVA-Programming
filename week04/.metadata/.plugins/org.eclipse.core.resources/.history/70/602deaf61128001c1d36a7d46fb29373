@@ -1,0 +1,9 @@
+package exam.bead;
+
+public class Child {
+	private int numOfBead;
+	
+	Child(int numOfBead){
+		
+	}
+}

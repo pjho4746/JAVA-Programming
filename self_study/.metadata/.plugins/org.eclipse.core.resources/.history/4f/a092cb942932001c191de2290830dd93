@@ -1,0 +1,33 @@
+package Rectangle;
+
+public class Rectangle {
+	Point lt, rb;
+	
+	public Rectangle(Point left_top, Point right_bottom) {
+		lt = left_top;
+		rb = right_bottom;
+	}
+	public Rectangle(int x1, int y1, int x2, int y2) {
+		lt = new Point(x1, y1);
+		rb = new Point(x2, y2);
+	}
+	public int getWidth() {
+		return rb.getX() - lt.getX();
+	}
+	public int getHeigth() {
+		return rb.getY() - lt.getY();
+	}
+	public int getCircumference() {
+		return 2*(getWidth()+getHeigth());
+	}
+	public int getArea() {
+		return getWidth()*getHeigth();
+	}
+	public void show() {
+		System.out.print("직사각형 "+getWidth()+"×"+getHeigth()+" ");
+		lt.show();
+		rb.show();
+		System.out.println("]");
+	}
+
+}

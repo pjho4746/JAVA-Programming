@@ -1,0 +1,20 @@
+package Final1;
+
+import javax.swing.*;
+
+public class Final16_9 extends JFrame {
+	public Final16_9() {
+		super("라디오버튼 ActionEvent 예제");
+		buildGUI();
+		setSize(250, 200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		
+	}
+	public static void main(String[] args) {
+		new Final16_9();
+	}
+
+}

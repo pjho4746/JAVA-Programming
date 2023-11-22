@@ -1,0 +1,14 @@
+package Person2;
+
+public class Main {
+
+	public static void main(String[] args) extends Person{
+		Person[] pList = new Person[2];
+		pList[0] = new Person("일지매", 18);
+		pList[1] = new UnivStudent("박지호", 20, "컴퓨터공학전공");
+		
+		
+
+	}
+
+}

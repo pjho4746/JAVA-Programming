@@ -1,0 +1,25 @@
+
+public class Tv {
+	//Tv의 속성
+	boolean status;
+	int channel;
+	int volume;
+	
+	//Tv의 전원을 켜거나 끄는 기능을 하는 메서드
+	void pushPower(){
+		this.status = !status;
+		return;
+	}
+	
+	//Tv 채널을 높이는 기능을 하는 메서드
+	void channelUp(){
+		this.channel++;
+		return;
+	}
+	//Tv 채널을 높이는 기능을 하는 메서드
+	void channelDown(){
+		this.channel--;
+		return;
+	}
+	
+}

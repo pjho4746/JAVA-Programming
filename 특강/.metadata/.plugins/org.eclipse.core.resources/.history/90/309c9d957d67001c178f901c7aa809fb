@@ -1,0 +1,42 @@
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.*;
+
+public class JCheckBoxTest extends JFrame {
+	private JCheckBox[] cb_list;
+	private JTextArea[] t_display;
+	
+	public JCheckBoxTest() {
+		super("JCheckBox 예제");
+		
+		buildGUI();
+		registerEventListener();
+		
+		setSize(500, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buldGUI() {
+		add(createCheckBoxPanel(), BorderLayout.NORTH);
+		
+	}
+	
+	private JPanel createCheckBoxPanel() {
+		JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		cb_list = new JCheckBox[5];
+		
+		for(int i=0; i<cb_list.length; i++) {
+			cb_list[i] = new JCheckBox("항목"+(i+1));
+			p.add(cb_list[i]);
+		}
+		return p;
+	}
+
+	public static void main(String[] args) {
+		new JCheckBoxTest();
+	}
+
+}

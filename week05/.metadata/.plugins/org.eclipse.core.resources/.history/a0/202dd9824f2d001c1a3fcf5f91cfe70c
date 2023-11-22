@@ -1,0 +1,27 @@
+//컴퓨터공학과 20200769
+import java.util.Random;
+
+public class NewMath {
+	private int x, y, z, res;
+	Random num = new Random();
+	//피연산자 만들기
+	public int makeOperand() {
+		return (num.nextInt(9)+1);
+	}
+	//연산자 만들기
+	public int makeOperator() {
+		return (num.nextInt(1)+1);
+	}
+	
+	public static void main(String[] args) {
+		NewMath nm = new NewMath();
+		int[] mathresult = new int[10];
+		
+		for(int i=0; i<mathresult.length; i++) {
+			nm.x = nm.makeOperand();
+			y = nm.makeOperand();
+			nm.z = 
+		}
+	}
+
+}

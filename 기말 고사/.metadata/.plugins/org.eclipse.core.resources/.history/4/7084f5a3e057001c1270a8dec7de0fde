@@ -1,0 +1,11 @@
+package Final1;
+
+import javax.swing.JFrame;
+
+public class Final16_7 extends JFrame {
+
+	public static void main(String[] args) {
+		new Final16_7();
+	}
+
+}

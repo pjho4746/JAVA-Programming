@@ -1,0 +1,23 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class LayoutTest2 {
+	private JFrame frame;
+	private CardLayout card = new CardLayout();
+
+	public static void main(String[] args) {
+		frame = new JFrame("Layout Test");
+		
+		buildGUI();
+		frame.setSize(200,300);
+		frame.setLocation(100,200);
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		autoChange();
+
+	}
+
+}

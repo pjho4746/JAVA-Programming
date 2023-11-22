@@ -1,0 +1,21 @@
+
+public class TvUser {
+
+	public static void main(String[] args) {
+		Tv t = null; //참조하기 위해 null 초기화
+		t = new Tv(); //객체 생성
+		t.status = false; //초기값은 off(false)
+		t.channel = 1; //초기값은 1
+		t.volume = 5; //초기값은 5
+		System.out.println("현재 TV의 전원은 "+ t.status + "이다. 전원을 켜주세요.");
+		
+		t.pushPower(); //tv 전원을 켜준다.
+		System.out.println("현재 TV의 전원은 "+ t.status + "이다. 전원을 켜준다.");
+		System.out.print("전원을 켠 TV의 채널은 "+ t.channel + ", ");
+		System.out.println("볼륨은 "+ t.volume + "이다.");
+		
+		
+
+	}
+
+}

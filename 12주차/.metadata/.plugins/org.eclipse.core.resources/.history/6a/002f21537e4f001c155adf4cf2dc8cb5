@@ -1,0 +1,72 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Vector;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Circle extends JFrame {
+
+	public Circle(){
+		setTitle("마우스로 원그리기");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setContentPane(new MyPanel());
+		setSize(300,300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Circle();
+	}
+
+	class MyPanel extends JPanel {
+		Point s=null;
+		Vector<Point> v = new Vector<Point>();
+
+		public MyPanel() {
+			//익명내부클래스
+			addMouseListener(new MouseListener() {  
+				@Override
+				public void mouseReleased(MouseEvent e) {}
+
+				@Override
+				public void mousePressed(MouseEvent e) {}
+
+				@Override
+				public void mouseExited(MouseEvent e) {}
+
+				@Override
+				public void mouseEntered(MouseEvent e) {}
+				
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					if(v.size()<=9) {
+						s=e.getPoint();
+						v.add(s); //repaint하면 없어지기 때문에 vetor에 저장
+					}
+					else
+						return;
+					repaint(); //화면에 마우스를 클릭할때 마다 호출
+				}
+			});
+			addMouseMotionListener(new MyMouseListener());
+		}
+		 class MyMouseListener extends MouseAdapter implements MouseMotionListener{
+			  public void mouseDragged(MouseEvent e){ // 드래그일시
+			   int x = e.getX();
+			   int y = e.getY();
+			   la.setLocation(x, y); // 위치 조정
+			  }
+			 }
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			if(s==null)
+				return;
+			g.setColor(Color.RED);
+			for(int i=0;i<v.size();i++)
+				g.fillOval(v.get(i).x-15, v.get(i).y-15, 50, 50);
+		}
+	}
+}

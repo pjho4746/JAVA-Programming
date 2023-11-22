@@ -1,0 +1,29 @@
+import java.awt.Point;
+
+import javax.swing.JComponent;
+
+public class SSaver extends JComponent {
+
+	static Random rand = new Random();
+	
+	Point mPos = new Point();
+	String mText;
+	int mSpeed;
+	
+	int mWidth, mHeight;
+	
+	public SSaver(int width, int height, int speed) {
+		mWidth = width;
+		mHeight = height;
+		
+		mPos.x = 0;
+		mPox.y = 50 + rand.nextInt(mHeight - 100);
+		
+		mText = "Hello World!";
+		mSpeed = speed;
+	}
+	
+	public void move() {
+		
+	}
+}

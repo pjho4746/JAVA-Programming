@@ -1,0 +1,20 @@
+package exam.bead;
+
+public class BeadSim {
+	Child child1, child2;
+	
+	public static void main(String[] args) {
+		BeadSim sim = new BeadSim();
+		
+		sim.child1 = new Child(15);
+		sim.child2 = new Child(9);
+		
+		System.out.println(">> 게임 전 보유 개수");
+		System.out.print("어린이1 ");
+		sim.child1.show();
+		System.out.print("어린이2 ");
+		sim.child2.show();
+	
+	}
+
+}

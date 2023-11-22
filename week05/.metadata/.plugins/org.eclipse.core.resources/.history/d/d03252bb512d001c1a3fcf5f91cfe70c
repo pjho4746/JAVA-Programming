@@ -1,0 +1,75 @@
+//컴퓨터공학과 20200769
+import java.util.Random;
+import java.util.Scanner;
+
+public class NewMath {
+	private int x, y, z, res;
+	Random num = new Random();
+	//피연산자 만들기
+	public int makeOperand() {
+		return (num.nextInt(9)+1);
+	}
+	//연산자 만들기
+	public int makeOperator() {
+		return (num.nextInt(1)+1);
+	}
+	
+	public static void main(String[] args) {
+		NewMath nm = new NewMath();
+		int[] mathresult = new int[10];
+		
+		for(int i=0; i<mathresult.length; i++) {
+			nm.x = nm.makeOperand();
+			nm.y = nm.makeOperand();
+			nm.z = nm.makeOperator();
+			Scanner s = new Scanner(System.in);
+			if(nm.z==0) {
+				System.out.println(nm.x+"+"+nm.y+"=");
+				nm.res = s.nextInt();
+				if(nm.res != nm.x + nm.y) {
+					for(int j=0; j<2; j++) {
+						System.out.println("오류: 계산이 틀렸습니다. 다시 입력하세요.");
+						nm.res = s.nextInt();
+						if(nm.res == nm.x + nm.y) {
+							break;
+						}
+					}
+					//정답이 틀렸으면 0
+					mathresult[i] = 0;
+					System.out.println("3번 모두 틀렸습니다. 정답은 "+nm.res);
+				}
+				else {
+					//정답이 맞으면 1
+					mathresult[i] = 1;
+					System.out.println("정답입니다.");
+				}
+	
+			}
+			else
+				System.out.println(nm.x+"-"+nm.y+"=");
+			nm.res = s.nextInt();
+			if(nm.res != nm.x - nm.y) {
+				for(int j=0; j<2; j++) {
+					System.out.println("오류: 계산이 틀렸습니다.");
+					if(nm.res == nm.x + nm.y) {
+						break;
+					}
+					nm.res = s.nextInt();
+				}
+				//정답이 틀렸으면 0
+				mathresult[i] = 0;
+				System.out.println("3번 모두 틀렸습니다. 정답은 "+nm.res);
+			}
+			else
+				//정답이 맞으면 1
+				mathresult[i] = 1;
+				System.out.println("정답입니다.");
+		}
+		for(int i=0; i<mathresult.length; i++) {
+			System.out.println("최종 결과(맞음/틀림)를 출력하겠습니다.");
+			System.out.print(mathresult[i]+" ");
+		}
+		
+	}
+
+}

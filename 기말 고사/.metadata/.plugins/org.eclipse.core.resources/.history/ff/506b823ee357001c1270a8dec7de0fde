@@ -1,0 +1,31 @@
+package Final1;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Final16_8 extends JFrame {
+	public Final16_8() {
+		super("라디오버튼 만들기 예쩨");
+		buildGUI();
+		setSize(250, 150);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		Container c = this.getContentPane();
+		c.setLayout(new FlowLayout());
+		c.add(createRadioPanel());
+	}
+	private JPanel createRadioPanel() {
+		String[] names = {"사과", "배", "체리"};
+		JRadioButton[] fruits = new JRadioButton[3];
+		
+		for(int i=0; fruits.length; i++) {
+			fruits[i] = new J
+		}
+	}
+	public static void main(String[] args) {
+		new Final16_8();
+	}
+
+}

@@ -1,0 +1,86 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class PhoneBookFrame extends JFrame {
+	private JTextField t_name;
+	private JTextField t_birthday;
+	private JTextField t_phoneNum;
+	private JTextField t_major;
+	private JTextField t_grade;
+	private JTextField t_company;
+	
+	private JToggleButton tb_normalInp;
+	private JToggleButton tb_univInp;
+	private JToggleButton tb_companyInp;
+	
+	private JButton b_input;
+	private JButton b_reset;
+	
+	private CardLayout card;
+	private JPanel p_cardPage;
+	
+	public PhoneBookFrame() {
+		
+	}
+	private void registerEvent() {
+		
+	}
+	private void buildGUI() {
+		
+	}
+	private JPanel createInputPanel() {
+		JPanel panel = new JPanel(new BorderLayout());
+		
+		panel.add(createTopButtonPanel(), BorderLayout.NORTH);
+		panel.add(createCenterPanel());
+		panel.add(createBottomButtonPanel(), BorderLayout.SOUTH);
+	}
+	private JPanel createTopButtonPanel() {
+		JPanel panel = new JPanel();
+		
+		tb_normalInp = new JToggleButton("일반", true);
+		tb_univInp = new JToggleButton("대학");
+		tb_companyInp = new JToggleButton("회사");
+		
+		ButtonGroup group = new ButtonGroup();
+		group.add(tb_normalInp);
+		group.add(tb_univInp);
+		group.add(tb_companyInp);
+		
+		panel.add(tb_normalInp);
+		panel.add(tb_univInp);
+		panel.add(tb_companyInp);
+		
+		return panel;
+	}
+	private JPanel createCenterPanel() {
+		JPanel panel = new JPanel(new BorderLayout());
+		
+		card = new CardLayout();
+		p_cardPage = new JPanel(card);
+		
+		p_cardPage.add("일반", createNormalInputPanel());
+		p_cardPage.add("대학", createUnivInputPanel());
+		p_cardPage.add("회사", createCompanyInputPanel());
+		
+		panel.add(createBasicInputPanel(), BorderLayout.CENTER);
+		panel.add(p_cardPage, BorderLayout.SOUTH);
+		
+		JPanel p_page = new JPanel();
+		p_page.add(panel);
+		
+		return p_page;
+	}
+	private JPanel createBasicInputPanel() {
+		JPanel panel = new JPanel(new GridLayout(0,1));
+		
+		JPanel p_name = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel p_birthday = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel p_phoneNum = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		t_name = new JTextField(8);
+		t_name = new JTextField(8);
+		t_name = new JTextField(8);
+		
+	}
+}

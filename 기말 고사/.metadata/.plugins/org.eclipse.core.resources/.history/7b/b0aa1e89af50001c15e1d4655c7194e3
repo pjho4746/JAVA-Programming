@@ -1,0 +1,62 @@
+package ComboBoxList_17;
+
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+import java.util.Vector;
+import javax.swing.*;
+
+public class ComboBoxList1 extends JFrame {
+	private Vector<PhoneInfo> mData = new Vector<PhoneInfo>();
+	
+	public ComboBoxList1() {
+		super("ComboBoxList1");
+		
+		readData();
+		buildGUI();
+		
+		setBounds(120, 120, 300, 100);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		JComboBox<PhoneInfo> cbox = new JComboBox<PhoneInfo>(mData);
+		
+		cbox.addItemListener(choiceEventListener);
+		cbox.addActionListener(selectEventListener);
+		
+		setLayout(new FlowLayout());
+		add(new JLabel("이름"));
+		add(cbox);
+	}
+	private readData() {
+		mData.add(new PhoneInfo("홍길동", "1990/01/01","010-111-2222"));
+		mData.add(new PhoneInfo("일지매", "010-123-4567"));
+		mData.add(new PhoneInfo("이지매", "1990/12/31","010-999-9999"));
+		mData.add(new PhoneInfo("고주몰", "010-777-6666"));
+		
+	}
+	private ItemListener choiceEventListener = new ItemListener() {
+		
+	}
+	private ActionListener selectEventListener = new ActionListener() {
+		
+	}
+	
+	class PhoneInfo{
+		private String name;
+		private String birthDay;
+		private String phoneNum;
+		
+		PhoneInfo(String name, String birthDay, String phoneNum){
+			this.name = name;
+			this.birthDay = birthDay;
+			this.phoneNum = phoneNum;
+		}
+	}
+
+	public static void main(String[] args) {
+		new ComboBoxList();
+	}
+
+}

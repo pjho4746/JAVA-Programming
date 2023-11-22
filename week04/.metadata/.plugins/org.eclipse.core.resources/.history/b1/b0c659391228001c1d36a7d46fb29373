@@ -1,0 +1,8 @@
+package exam.bead;
+
+public class BeadSim {
+	Child chid1, chid2;
+	
+	public static void main
+
+}

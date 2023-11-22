@@ -1,0 +1,12 @@
+package Final1;
+
+import javax.swing.JFrame;
+
+public class Final16_9 extends JFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

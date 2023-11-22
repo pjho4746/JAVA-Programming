@@ -1,0 +1,16 @@
+package GlassBead;
+
+public class Child {
+	int numofglass;
+		
+	public Child(int numofglass) {
+		this.numofglass = numofglass;
+	}
+	public obtainGlass(Child child, int glass) {
+		
+	}
+	public loseGlass(int numofglass) {
+		
+	}
+	
+}

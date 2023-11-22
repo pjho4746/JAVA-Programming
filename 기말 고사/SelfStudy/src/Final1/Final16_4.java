@@ -1,0 +1,31 @@
+package Final1;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Final16_4 extends JFrame {
+	public Final16_4() {
+		super("텍스트필드 만들기 예제");
+		
+		buildGUI();
+		
+		setSize(300, 150);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		Container c = this.getContentPane();
+		c.setLayout(new FlowLayout());
+		
+		c.add(new JLabel("이름"));
+		c.add(new JTextField(20));
+		
+		c.add(new JLabel("주소"));
+		c.add(new JTextField("서울시....", 20));
+		
+	}
+	public static void main(String[] args) {
+		new Final16_4();
+	}
+
+}

@@ -1,0 +1,33 @@
+//컴퓨터공학과 20200769
+import java.util.Random;
+import java.util.Scanner;
+
+public class NewMath {
+	private int x, y, z, res;
+	Random num = new Random();
+	Scanner s = new Scanner();
+	//피연산자 만들기
+	public int makeOperand() {
+		return (num.nextInt(9)+1);
+	}
+	//연산자 만들기
+	public int makeOperator() {
+		return (num.nextInt(1)+1);
+	}
+	
+	public static void main(String[] args) {
+		NewMath nm = new NewMath();
+		int[] mathresult = new int[10];
+		
+		for(int i=0; i<mathresult.length; i++) {
+			nm.x = nm.makeOperand();
+			nm.y = nm.makeOperand();
+			nm.z = nm.makeOperator();
+			if(nm.z==0) {
+				System.out.println(nm.x+"+"+nm.y+"=");
+				nm.res = s.nextInt();
+			}
+		}
+	}
+
+}

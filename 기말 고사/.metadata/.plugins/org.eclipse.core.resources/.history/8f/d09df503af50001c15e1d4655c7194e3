@@ -1,0 +1,42 @@
+package ComboBoxList_17;
+
+import java.awt.*;
+import java.util.Vector;
+import javax.swing.*;
+
+public class ComboBoxList1 extends JFrame {
+	private Vector<PhoneInfo> mData = new Vector<PhoneInfo>();
+	
+	public ComboBoxList1() {
+		super("ComboBoxList1");
+		
+		readData();
+		buildGUI();
+		
+		setBounds(120, 120, 300, 100);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	private void buildGUI() {
+		JComboBox<PhoneInfo> cbox = new JComboBox<PhoneInfo>(mData);
+		
+		cbox.addItemListener(choiceEventListener);
+		box.addActionListener(selectEventListener);
+		
+		setLayout(new FlowLayout());
+		add(new JLabel("ÀÌ¸§"));
+		add(cbox);
+	}
+	private readData() {
+		mData.add(new PhoneInfo("È«±æµ¿", "1990/01/01","010-111-2222"));
+		mData.add(new PhoneInfo("È«±æµ¿", "1990/01/01","010-111-2222"));
+		mData.add(new PhoneInfo("È«±æµ¿", "1990/01/01","010-111-2222"));
+		mData.add(new PhoneInfo("È«±æµ¿", "1990/01/01","010-111-2222"));
+		
+	}
+
+	public static void main(String[] args) {
+		new ComboBoxList();
+	}
+
+}

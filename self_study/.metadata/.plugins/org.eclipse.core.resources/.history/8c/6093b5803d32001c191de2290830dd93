@@ -1,0 +1,15 @@
+package Person2;
+
+public class Person {
+	protected int age;
+	protected String name;
+	
+	public void WhatYourName() {
+		System.out.println(name);
+	}
+	
+	public void HowOldAreYou() {
+		System.out.println(age+"¼¼");
+	}
+	
+}

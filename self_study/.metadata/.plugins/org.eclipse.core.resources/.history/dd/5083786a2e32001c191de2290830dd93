@@ -1,0 +1,10 @@
+package Lotto;
+
+public class LottoSim {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

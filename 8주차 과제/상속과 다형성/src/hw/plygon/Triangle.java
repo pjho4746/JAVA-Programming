@@ -1,0 +1,22 @@
+//컴퓨터공학과 20200769 박지호
+package hw.plygon;
+
+public class Triangle extends Polygon {
+	int x2, y2;
+	int x3, y3;
+	
+	public Triangle(int x, int y, int w, int h, String Type, int x2, int y2, int x3, int y3) {
+		super(x, y, w, h, Type);
+		this.x2 = x2; this.y2 = y2;
+		this.x3 = x3; this.y3 = y3;
+	}
+
+	public double getArea() {
+		return w * h * 0.5;
+	}
+	
+	public void show() {
+		super.show();
+		System.out.println("또다른 위치: (" + x2 + "," + y2+ ") (" + x3 + "," +y3 +")");
+	}
+}

@@ -1,0 +1,23 @@
+package Person1;
+
+public class Person {
+	protected int age;
+	protected String name;
+	
+	public void WhatYourName() {
+		System.out.println(name);
+	}
+	
+	public void HowOldAreYou() {
+		System.out.println(age+"¼¼");
+	}
+	public void WhoAreYou() {
+		WhatYourName();
+		HowOldAreYou();
+	}
+
+	@Override
+	public String toString() {
+		return name+"("+age+"¼¼)";
+	}
+}

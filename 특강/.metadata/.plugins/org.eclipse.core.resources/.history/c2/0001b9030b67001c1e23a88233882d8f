@@ -1,0 +1,115 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+
+public class PhoneBookFrame {
+	private JFrame frame;
+	private CardLayout card = new CardLayout();
+	private JPanel p_card, p1_card, p2_card, p3_card;
+	private JButton btnfirst, btnsecond, btnthird, firstbtn, secondbtn;
+	
+	public PhoneBookFrame() {
+		frame = new JFrame("PhoneBookFrame");
+		
+		buildGUI();
+		createTopButtonPanel();
+		createCenterPanel();
+		createCardPanel();
+		createBottomButtonPanel();
+		
+		frame.setSize(250,400);
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);	
+	
+	}
+	private void buildGUI() {
+		frame.add(createTopButtonPanel(), BorderLayout.NORTH);	
+		frame.add(createCardPanel(), BorderLayout.CENTER);
+		
+		
+	}
+	private JPanel createTopButtonPanel() {
+		btnfirst = new JButton("일반");
+		btnsecond = new JButton("대학");
+		btnthird = new JButton("회사");
+		
+		JPanel topbutton = new JPanel(new FlowLayout());
+		topbutton.add(btnfirst);
+		topbutton.add(btnsecond);
+		topbutton.add(btnthird);
+		
+		btnfirst.setSelected(true);
+		btnsecond.setSelected(true);
+		btnthird.setSelected(true);
+		
+		return topbutton;
+	}
+	private void createCenterPanel() {
+		JPanel name = new JPanel(new FlowLayout());
+		name.add(new JLabel("이       름"));
+		name.add(new JTextField(10));
+		
+		JPanel number = new JPanel(new FlowLayout());
+		number.add(new JLabel("전화번호"));
+		number.add(new JTextField(10));
+		
+		JPanel birth = new JPanel(new FlowLayout());
+		birth.add(new JLabel("생년월일"));
+		birth.add(new JTextField(10));
+		
+		p1_card = new JPanel(new GridLayout(0,1));
+		p1_card.add(name);
+		p1_card.add(number);
+		p1_card.add(birth);
+		
+		JPanel major = new JPanel(new FlowLayout());
+		major.add(new JLabel("전       공"));
+		major.add(new JTextField(20));
+		
+		JPanel grade = new JPanel(new FlowLayout());
+		grade.add(new JLabel("학       년"));
+		grade.add(new JTextField(20));
+		
+		p2_card = new JPanel(new GridLayout(0,1));
+		p2_card.add(p1_card);
+		p2_card.add(major);
+		p2_card.add(grade);
+		
+		JPanel work = new JPanel(new FlowLayout());
+		work.add(new JLabel("회       사"));
+		work.add(new JTextField(20));
+		
+		p3_card = new JPanel(new GridLayout(0,1));
+		p2_card.add(p1_card);
+		p2_card.add(work);
+		
+		
+	}
+	public JPanel createCardPanel() {
+		p_card = new JPanel();
+		p_card.setLayout(card);
+		
+		p_card.add(p1_card);
+		p_card.add(p2_card);
+		p_card.add(p3_card);
+		
+		return p_card;
+	}
+	private JPanel createBottomButtonPanel() {
+		firstbtn = new JButton("입력");
+		secondbtn = new JButton("초기화");
+		
+		JPanel Bottombutton = new JPanel(new FlowLayout());
+		Bottombutton.add(firstbtn);
+		Bottombutton.add(secondbtn);
+		
+		firstbtn.setSelected(true);
+		secondbtn.setSelected(true);
+
+		return Bottombutton;
+	}
+}

@@ -1,0 +1,10 @@
+package Person1;
+
+public class UnivStudent extends Person{
+	protected String major;
+	
+	public void WhoAreYou() {
+		super.WhoAreYou();
+		System.out.println(major+"전공 대학생");
+	}
+}
